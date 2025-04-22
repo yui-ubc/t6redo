@@ -1,0 +1,18 @@
+---
+title: "Tutorial 6: Refactoring R Code"
+format: html
+execute: false
+---
+
+# Introduction
+
+In this tutorial, we refactor code into reusable scripts. We use the `palmerpenguins` dataset.
+
+## Data Summary
+
+```{r}
+library(tidyverse)
+library(tidymodels)
+
+data <- read_rds("data/01_clean_penguins.rds")
+glimpse(data)
