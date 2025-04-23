@@ -1,7 +1,6 @@
 ---
 title: "Tutorial 6: Refactoring R Code"
 format: html
-execute: false
 ---
 
 # Introduction

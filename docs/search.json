@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "tutorial6.html",
+    "href": "tutorial6.html",
+    "title": "Tutorial 6: Refactoring R Code",
+    "section": "",
+    "text": "In this tutorial, we refactor code into reusable scripts. We use the palmerpenguins dataset.\n\n\nlibrary(tidyverse) library(tidymodels)\ndata &lt;- read_rds(“data/01_clean_penguins.rds”) glimpse(data)"
+  },
+  {
+    "objectID": "tutorial6.html#data-summary",
+    "href": "tutorial6.html#data-summary",
+    "title": "Tutorial 6: Refactoring R Code",
+    "section": "",
+    "text": "library(tidyverse) library(tidymodels)\ndata &lt;- read_rds(“data/01_clean_penguins.rds”) glimpse(data)"
+  }
+]
