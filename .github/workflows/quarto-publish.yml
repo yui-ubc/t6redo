@@ -1,28 +1,24 @@
 name: Quarto Publish
 
 on:
-  workflow_dispatch:  # Allows you to manually trigger the workflow
+  workflow_dispatch:
   push:
     branches:
       - main
 
 jobs:
-  build-deploy:
-    runs-on: ubuntu-latest  # Use an Ubuntu runner
+  deploy:
+    runs-on: ubuntu-latest
 
     permissions:
-      contents: write  # Allow write access to repository contents
+      contents: write
 
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Publish pre-rendered site from docs/
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          target: gh-pages  # Publish to the gh-pages branch
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs  # this tells it to publish from the docs folder
